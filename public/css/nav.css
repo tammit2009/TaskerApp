@@ -1,0 +1,230 @@
+
+/* navigation styles */
+
+.nav-container {
+    width: 100%;
+    background-color: var(--color-primary);
+}
+
+.navbar {
+    display: grid;
+    grid-template-columns: 0.2fr auto 1fr;	/*  0.4fr */
+    align-items: center;
+    height: var(--nav-height);
+    width: 90%;
+    max-width: 1720px;
+    margin: 0 auto;
+}
+
+#navbar-logo {
+    color: var(--color-white);
+    justify-self: start;
+    margin-left: 20px;
+    cursor: pointer;
+}
+
+#navbar-logo .logo {
+    display: flex;
+    align-items: center;
+}
+
+#navbar-logo .logo i {
+    font-size: 28px;
+    margin-right: 5px;
+}
+
+#navbar-logo .logo .logo_name {
+    font-size: 24px;
+    font-weight: 400;
+}
+
+#navbar-logo .logo .logo_name a {
+    text-decoration: none;
+    color: var(--color-white);
+} 
+
+.nav-menu-access-group {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	margin-left: 10px;
+}
+
+.nav-menu {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	width: 70%;
+	list-style: none;
+	text-align: center;
+}
+
+.nav-access {
+    justify-self: flex-end;
+	width: 20%;
+	list-style: none;
+	text-align: right;
+}
+
+.nav-menu .nav-links {
+	margin: 0 10px;
+}
+
+.nav-links {
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+.nav-links.active {
+    font-weight: bold;
+    color: var(--color-accent);
+}
+
+.nav-links:hover {
+    color: var(--color-accent);
+    transition: all 0.2s ease-out;
+}
+
+.nav-links-btn {
+    background-color: var(--color-accent);
+    padding: 6px 16px;
+    border-radius: 4px;
+}
+
+.nav-links-btn:hover {
+    background-color: transparent;
+    color: var(--color-accent);
+    padding: 5px 15px;
+    border-radius: 4px;
+    border: 1px solid var(--color-accent);
+    transition: all 0.3s ease-out;
+}
+
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    transition: all .3s ease-in-out;
+    background: var(--color-white);
+}
+
+
+@media screen and (max-width: 1060px) {
+	.nav-menu {
+		width: 80%;
+	}
+}
+
+@media screen and (max-width: 768px) {
+    .nav-container {
+        position: relative;
+    }
+
+    #navbar-logo {
+        margin-left: 20px;
+    }
+
+    .nav-menu-access-group {
+		background: var(--color-accent);
+		margin: 0;
+        width: 100%;
+		position: absolute;
+		top:  var(--nav-height);
+		left: -100%;
+		opacity: 0;
+        transition: all 0.5s ease;
+		display: flex;
+		flex-direction: column;
+		z-index: 100;
+	}
+	
+	.nav-menu-access-group.active {
+		background: var(--color-primary); 
+		left: 0;
+        opacity: 1;
+        transition: all 0.5s ease;
+	}
+
+    .nav-menu {
+        display: block;
+		background: var(--color-primary);
+        margin: 0;
+        width: 100%;
+		justify-content: center;
+    }
+
+    .nav-menu .nav-links {
+		margin: 0;
+	}
+
+    .nav-access {
+		display: block;
+		background: var(--color-accent);
+        margin: 0;
+        width: 100%;
+	}
+	
+    .nav-links {
+        text-align: center;
+        line-height: 45px;
+        width: 100%;
+        display: table;
+    }
+
+    .nav-links:hover {
+        background-color: var(--color-accent);
+        color: var(--color-white);
+        transition: all 0.4s ease-out;
+    }
+
+    .navbar {
+        width: 100%;
+    }
+
+    .nav-links-btn {
+        border: none;
+		text-align: center;
+        padding: 0;
+        border-radius: 0;
+        background-color: var(--color-primary);
+        color: var(--color-white);
+        transition: all 0.4s ease-out;
+    }
+
+    .nav-links-btn:hover {
+        border: none;
+        padding: 0;
+        border-radius: 0;
+        background-color: var(--color-accent);
+        color: var(--color-white);
+        transition: all 0.4s ease-out;
+    }
+
+    #mobile-menu {
+        position: absolute;
+        top: 50%;
+        right: 5%;
+        transform: translate(5%, -50%);
+    }
+
+    .menu-toggle .bar {
+        display: block;
+        cursor: pointer;
+    }
+
+    .menu-toggle:hover {
+        cursor: pointer;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(2) {
+        opacity: 0;
+    }
+
+    #mobile-menu.is-active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+
+    #mobile-menu.is-active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+} 

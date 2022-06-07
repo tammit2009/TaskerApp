@@ -1,0 +1,25 @@
+
+<div class="container">
+
+    <div class="col-sm-6 col-md-4" style="margin: 30px 20px;">
+        <img class="img-circle img-responsive img-center" src="{{user.profile.picture}}" alt="" />
+
+        <br />
+        <p>Firstame: {{user.profile.firstname}}</p>
+        <p>Lastname: {{user.profile.lastname}}</p>
+        <p>Email: {{user.email}}</p>
+
+        {{#ifNotExistOrTypeofndef user.address}}
+            <p>Address: <span style="color: #c0392b; font-weight: bold">You have no address</span></p>
+        {{else}}
+            <p>Address: {{user.address}}</p>
+        {{/ifNotExistOrTypeofndef}}
+
+        <a href="/edit_profile" class="btn btn-primary btn-lg">Edit Profile</a>
+    </div>
+
+    <div class="col-md-6">
+
+    </div>
+    
+</div>

@@ -1,0 +1,134 @@
+
+.wrapper {
+    background-color: var(--color-primary);
+}
+
+.main-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-self: center;
+    width: var(--container-margin-lg);
+    margin: 0 auto;
+    height: 90vh;
+    background-color: var(--color-primary);
+}
+
+.main-content {
+    justify-self: start;
+    margin-left: 20px;
+    color: var(--color-white);
+    width: 80%;
+}
+
+.main-content h1 {
+    font-size: 2rem;
+}
+
+.main-content p {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+}
+
+.main-btn {
+    font-size: 1rem;
+    background-color: var(--color-accent);
+    padding: 8px 20px;
+    border: none;
+    border-radius: 4px;
+    margin-top: 2rem;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.3s;
+    outline: none;
+}
+
+.main-btn a {
+    position: relative;
+    z-index: 2;
+    color: var(--color-white);
+    text-decoration: none;
+}
+
+.main-btn:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    transition: all .3s ease-in-out;
+    border-radius: 4px;
+    background: var(--color-lightblue);
+}
+
+.main-btn:hover {
+    color: var(--color-white);
+}
+
+.main-btn:hover:after {
+    width: 100%;
+}
+
+#main-img {
+    height: 80%;
+    width: 80%;
+}
+
+.main-img-container {
+    text-align: center;
+}
+
+/* Mobile Responsive */
+@media screen and (max-width: 768px) {
+    .main-container {
+        display: grid;
+        grid-template-columns: auto;
+        align-items: center;
+        justify-self: center;
+        width: 90%;
+        margin: 0 auto;
+        height: 90vh;
+        background-color: var(--color-primary);
+    }
+
+    .main-content {
+        justify-self: center;
+        color: var(--color-white);
+        width: var(--container-margin-md);
+        margin: 0;
+    }
+
+    .main-content h1 {
+        font-size: 2.5rem;
+    }
+
+    .main-content p {
+        margin-top: 1rem;
+        font-size: 1.5rem;
+    }
+
+    #main-img {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .main-content {
+        text-align: center;
+    }
+
+    .main-content h1 {
+        font-size: 2.8rem;
+    }
+
+    .main-content p {
+        margin-top: 2rem;
+        font-size: 1.5rem;
+    }
+
+    .main-btn {
+        padding: 12px 36px;
+        margin-top: 2.5rem;
+    }
+}

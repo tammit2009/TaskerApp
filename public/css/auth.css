@@ -1,0 +1,288 @@
+
+/* Common */
+
+a {
+    text-decoration: none;
+    color: #000;
+}
+
+section {
+    height: calc(100vh - var(--nav-height));
+    background: var(--color-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.alert {
+    position: relative;
+    display: block;
+    background-color: #cccccc;
+    padding: 10px 25px 10px 20px;
+    border: none;               
+    border-radius: 2px;
+    /* box-shadow: 0 2px 4px rgba(0,0,0,0.2); */
+    margin: 15px auto 20px;
+    max-width: 300px;
+    display: none;
+    /* visibility: hidden;
+       opacity: 0;
+       transition: opacity 0.2s, top 0.2s, visibility 0.2s;   */
+}
+
+.alert-success {
+    background: #55c56d;
+    /* border-color: #009d23; */
+    color: #ffffff;
+}
+
+.alert-error {
+    background: #f36672;
+    /* border-color: #ba0000; */
+    color: #ffffff;
+}
+
+.alert .close {
+    position: absolute;
+    right: 10px;
+    top: 7px;
+    font-weight: bold;
+    color: rgb(255, 238, 238);
+    cursor: pointer;
+    border: none;
+    background: none; 
+}
+
+.alert .alert-msg {
+    font-size: 14px;
+    max-width: 100%;
+}
+
+.alert-show {
+    display: block;
+    /* visibility: hidden;
+       opacity: 0; */
+}
+
+/* Login Styles */
+
+#login-form-container {
+    background-color: var(--color-white);
+    padding: 15px 30px;
+    border-radius: 3px;
+    width: 360px;
+}
+
+#login-form-container h1 {
+    text-align: center;
+    margin: 20px 0 20px 0;
+    color: var(--color-accent);
+    font-size: 2rem;
+}
+
+#login-form form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#login-form .validation-group {
+    margin-bottom: 1.2rem;  
+    width: 100%;
+    position: relative;
+}
+
+#login-form .validation-group.error {
+    margin-bottom: 2rem;  
+}
+
+#login-form .validation-group.valid {
+    margin-bottom: 0.5rem;
+}
+
+#login-form .validation-group p {
+    font-size: 0.7rem;
+    margin-top: 0.5rem;     
+    color: var(--color-error);
+    position: absolute;
+    top: 2.5rem;
+    display: none; 
+    z-index: 200;
+}
+
+#login-form .validation-group.error p {
+    display: block;
+}
+
+#login-form .validation-group input {
+    width: inherit;
+    font-size: 18px;
+    font-weight: 400;
+    display: block;
+    padding: 8px 10px;
+    border: 1px solid #b9b9b9;
+    border-radius: 3px;
+    outline: none; 
+}
+
+#login-form .validation-group.error input {
+    border: 1px solid var(--color-error);
+}
+
+#login-form .validation-group.valid input {
+    border: 1px solid var(--color-valid);
+}
+
+#login-form .validation-group input:focus {
+    border-color: #555;
+}
+
+#login-form .submit-group {
+    margin: 0.6rem 0 1.2rem;
+    width: 100%;
+    position: relative;
+}
+
+#login-form .submit-group .submit-btn {
+    width: inherit;
+    padding: 12px 5px;
+    border-width: 0;
+    border-radius: 3px;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    outline: none;
+    transition: background-color 0.2s; 
+}
+
+#login-form .submit-group .submit-btn:hover {
+    background-color: var(--color-lightblue);
+}
+
+#login-form p {
+    text-align: center;
+}
+
+#login-form p a {
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-accent);
+}
+
+#login-form p a:hover {
+    color: var(--color-lightblue);
+}
+
+
+/* Registration Styles */
+
+#register-form-container {
+    background-color: var(--color-white);
+    padding: 15px 30px;
+    border-radius: 3px;
+    width: 360px;
+}
+ 
+#register-form-container h1 {
+    text-align: center;
+    margin: 20px 0 20px 0;
+    color: var(--color-accent);
+    font-size: 2rem;
+}
+
+#register-form form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#register-form .validation-group {
+    margin-bottom: 1.2rem;  
+    width: 100%;
+    position: relative;
+}
+
+#register-form .validation-group.error {
+    margin-bottom: 2rem;  
+}
+
+#register-form .validation-group.valid {
+    margin-bottom: 0.5rem;
+}
+
+#register-form .validation-group p {
+    font-size: 0.7rem;
+    margin-top: 0.5rem;     
+    color: var(--color-error);
+    position: absolute;
+    top: 2.5rem;
+    display: none; 
+    z-index: 200;
+}
+
+#register-form .validation-group.error p {
+    display: block;
+}
+
+#register-form .validation-group input {
+    width: inherit;
+    font-size: 18px;
+    font-weight: 400;
+    display: block;
+    padding: 8px 10px;
+    border: 1px solid #b9b9b9;
+    border-radius: 3px;
+    outline: none; 
+}
+
+#register-form .validation-group.error input {
+    border: 1px solid var(--color-error);
+}
+
+#register-form .validation-group.valid input {
+    border: 1px solid var(--color-valid);
+}
+
+#register-form .validation-group input:focus {
+    border-color: #555;
+}
+
+#register-form .submit-group {
+    margin: 0.6rem 0 1.2rem;
+    width: 100%;
+    position: relative;
+}
+
+#register-form .submit-group .submit-btn {
+    width: inherit;
+    padding: 12px 5px;
+    border-width: 0;
+    border-radius: 3px;
+    font-size: 18px;
+    font-weight: 400;
+    background-color: var(--color-accent);
+    color: var(--color-white);
+    outline: none;
+    transition: background-color 0.2s; 
+}
+
+#register-form .submit-group .submit-btn:hover {
+    background-color: var(--color-lightblue);
+}
+
+#register-form p {
+    text-align: center;
+}
+
+#register-form p a {
+    font-weight: 600;
+    text-decoration: none;
+    color: var(--color-accent);
+}
+
+#register-form p a:hover {
+    color: var(--color-lightblue);
+}

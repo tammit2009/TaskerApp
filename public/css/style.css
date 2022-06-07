@@ -1,0 +1,47 @@
+
+/* import related css files */
+@import url('nav.css');
+@import url('content.css');
+@import url('footer.css');
+@import url('modal.css');
+
+
+/* import fonts: 
+ * - font-family: 'Montserrat', sans-serif; 
+ * - font-family: 'Poppins', sans-serif; 
+ * - font-family: 'Roboto', sans-serif; 
+*/
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Poppins:wght@200;300;400;500;600;700&family=Roboto:wght@300;400;500;700&display=swap');
+
+/* define global variables */
+:root {
+    /* colors */
+    --color-bg-grad1    :#2f8ff2; 
+    --color-bg-grad2    :#d7e7f7;
+    --color-primary     :#11101d;
+    --color-secondary   :#212329;
+    --color-accent      :#F9423D;
+    --color-lightblue   :#337af1;
+    --color-error       :#f00e0e;
+    --color-valid       :#0add0a;
+    --color-white       :#ffffff;
+
+    /* dimensions */
+    --nav-height            : 60px;
+    --container-margin-lg   : 80%;
+    --container-margin-md   : 90%;
+}
+
+/* general styles */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body {
+    /* background: linear-gradient(45deg, var(--color-bg-grad1), var(--color-bg-grad2)); */
+}
+

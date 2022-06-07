@@ -1,0 +1,90 @@
+<div class="sidebar">
+    <div class="logo_content">
+        <div class="logo">
+            <i class='bx bxs-cube-alt'></i>
+            <div class="logo_name"><a href="/">Tasker</a></div>
+        </div>
+        <i class="bx bx-menu" id="btn"></i>
+    </div>
+    <ul class="nav_list">
+        <li>
+            <!-- <a href="#" class="nav_link active_link"> -->
+            <a href="#" class="nav_link">
+                <!-- <i class="bx bx-grid-alt"></i> -->
+                <i class='bx bx-tachometer'></i>
+                <span class="links_name">Dashboard</span>
+            </a>
+            <span class="tooltip">Dashboard</span>
+        </li>
+        <li>
+            <div href="#" class="nav_link collapse">
+                <div class="collapse-parent">
+                    <i class="bx bx-folder"></i>
+                    <span class="links_name">Projects</span>
+                    <i class='bx bx-chevron-down collapse_link'></i>
+                </div>
+                <div class="collapse_menu">
+                    <a href="#" class="collapse_sublink">Data</a>
+                    <a href="#" class="collapse_sublink">Group</a>
+                    <a href="#" class="collapse_sublink">Members</a>
+                </div>
+            </div>
+            <span class="tooltip">Projects</span>
+        </li>
+        <li>
+            <a href="#" class="nav_link">
+                <i class='bx bx-task'></i>
+                <span class="links_name">Tasks</span>
+            </a>
+            <span class="tooltip">Tasks</span>
+        </li>
+        <li>
+            <a href="#" class="nav_link">
+                <i class='bx bxs-report'></i>
+                <span class="links_name">Reports</span>
+            </a>
+            <span class="tooltip">Reports</span>
+        </li>
+        <li>
+            <div href="#" class="nav_link collapse">
+                <div class="collapse-parent">
+                    <i class="bx bx-user"></i>
+                    <span class="links_name">Users</span>
+                    <i class='bx bx-chevron-down collapse_link'></i>
+                </div>
+                <div class="collapse_menu">
+                    <a href="#" class="collapse_sublink">User List</a>
+                    <a href="#" class="collapse_sublink">Groups</a>
+                    <a href="#" class="collapse_sublink">Roles</a>
+                </div>
+            </div>
+            <span class="tooltip">Users</span>
+        </li>
+        <li>
+            <a href="#" class="nav_link">
+                <i class="bx bx-chat"></i>
+                <span class="links_name">Messages</span>
+            </a>
+            <span class="tooltip">Messages</span>
+        </li>
+        <li>
+            <a href="#" class="nav_link">
+                <i class="bx bx-cog"></i>
+                <span class="links_name">Settings</span>
+            </a>
+            <span class="tooltip">Settings</span>
+        </li>
+    </ul>
+    <div class="profile_content">
+        <div class="profile">
+            <div class="profile_details">
+                <img src="images/profile.png" alt="">
+                <div class="name_job">
+                    <div class="name">{{user.profile.name}}</div>
+                    <div class="job">{{user.profile.description}}</div>
+                </div>
+            </div>
+            <i class="bx bx-log-out" id="log_out"></i>
+        </div>
+    </div>
+</div>

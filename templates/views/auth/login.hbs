@@ -1,0 +1,33 @@
+<section>
+
+    <div id="login-form-container">
+        <h1>Login</h1>
+
+        {{#ifCond message.length ">" 0 }}
+            <div class="alert alert-error alert-show">
+                <button type="button" class="close"><span>&times;</span></button>
+                <div class="alert-msg">
+                    {{ message }}
+                </div>      
+            </div>
+        {{/ifCond}} 
+
+        <div id="login-form">
+            <form action="#" method="post">
+                <div class="validation-group">
+                    <input type="text" name="email" placeholder="Email" id="email">
+                    <p>Error Message</p>
+                </div>
+                <div class="validation-group">
+                    <input type="password" name="password" placeholder="Password" id="password">
+                    <p>Error Message</p>
+                </div>
+                <div class="submit-group">
+                    <input type="submit" name="loginBtn" value="Login" class="submit-btn">
+                </div> 
+            </form>
+            <p>New user? <a href="/register">Register</a></p>
+        </div>
+    </div>
+    
+</section>

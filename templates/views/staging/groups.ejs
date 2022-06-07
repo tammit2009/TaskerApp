@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Upload Data</title>
+</head>
+<body>
+
+    <p>Use the form below to upload a list of groups.
+        Click <a href="/setup/template">here</a> for an example template.
+    </p>
+
+    <form action="/setup/upload_groups" method="POST" encType="multipart/form-data">
+        <input type="file" name="file" accept="*.json|*.csv" /><br/><br/>
+        <input type="submit" value="Upload Groups" />
+    </form>
+
+</body>
+</html>
